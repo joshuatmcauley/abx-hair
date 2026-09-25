@@ -381,6 +381,28 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .section-note, .panel-foot, .form-hint, .fine { color: var(--muted); }
 .work .section-head { max-width: 40rem; margin-bottom: 1.6rem; }
 
+.preview-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+.preview-row a {
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.preview-row img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+.preview-row a:hover img { transform: scale(1.03); }
+.preview-cta { margin-top: 1.2rem; }
+.gallery-page { padding-top: 2.5rem; }
+.gallery + .section-head { margin-top: 2.4rem; }
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -670,7 +692,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
     box-shadow: var(--shadow);
   }
   .nav-links.open { display: flex; }
-  .hero, .about, .visits, .book, .price-layout, .footer, .offer-inner, .gallery {
+  .hero, .about, .visits, .book, .price-layout, .footer, .offer-inner, .gallery, .preview-row {
     grid-template-columns: 1fr 1fr;
   }
   .hero { min-height: 0; padding-top: 1.2rem; }
@@ -689,8 +711,8 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 }
 
 @media (max-width: 560px) {
-  .gallery { grid-template-columns: 1fr; }
-  .shot img, .shot.is-poster img { height: 420px; }
+  .gallery, .preview-row { grid-template-columns: 1fr; }
+  .shot img, .shot.is-poster img, .preview-row img { height: 420px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
