@@ -68,21 +68,14 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.02e
   gap: 18px;
   animation: curtain 0.9s cubic-bezier(0.76, 0, 0.24, 1) 1.9s forwards;
 }
-.loader-mix { width: min(168px, 46vw); overflow: visible; }
-.mix-swirl {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: swirl 1.15s linear infinite;
+.loader-mix {
+  width: min(280px, 72vw);
+  height: auto;
+  display: block;
+  animation: mix-bob 1.8s ease-in-out infinite;
 }
-.mix-brush {
-  transform-box: view-box;
-  transform-origin: 50% 69%;
-  animation: stir 0.7s ease-in-out infinite alternate;
-}
-@keyframes swirl { to { transform: rotate(360deg); } }
-@keyframes stir {
-  from { transform: rotate(-20deg); }
-  to { transform: rotate(10deg); }
+@keyframes mix-bob {
+  50% { transform: translateY(-8px); }
 }
 .loader p {
   margin: 0;
@@ -701,7 +694,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .loader { display: none; }
-  .marquee-track, .mix-swirl, .mix-brush, .reveal {
+  .marquee-track, .loader-mix, .reveal {
     animation: none !important;
   }
   .reveal { opacity: 1; transform: none; }
