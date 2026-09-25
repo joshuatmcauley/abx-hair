@@ -1,29 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>abxhair · Aleigha Bell · Home hair visits in Saintfield</title>
-  <meta name="description" content="abxhair is Aleigha Bell, a fully qualified hairdresser offering cuts, colour, styling and tape-in extensions as home visits across Saintfield, Downpatrick and County Down.">
-  <meta name="theme-color" content="#0b0a09">
+  <meta name="description" content="Cuts, colour, blow dries and tape-in extensions, brought to your home in Saintfield, Downpatrick and County Down by Aleigha Bell.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
+<body class="is-loading">
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <svg class="scissors loader-scissors" viewBox="0 0 200 120" aria-hidden="true">
+      <g class="blade blade-top"><path d="M92 56c18-2 48-22 70-34 4-2 8 2 6 6L152 42 90 58c-1 0-2-1-2-2z" fill="#fffaf3" stroke="#f6f0e6" stroke-width="3" stroke-linejoin="round"/></g>
+      <g class="blade blade-bot"><path d="M92 64c18 2 48 22 70 34 4 2 8-2 6-6l-16-14-60-16c-1 0-2 1-2 2z" fill="#e7d7b4" stroke="#f6f0e6" stroke-width="3" stroke-linejoin="round"/></g>
+      <circle cx="92" cy="60" r="7" fill="#c9a15b" stroke="#f6f0e6" stroke-width="3"/>
+      <path d="M86 56c-14-8-28-22-42-20" stroke="#f6f0e6" stroke-width="6" stroke-linecap="round"/>
+      <path d="M86 64c-14 8-28 22-42 20" stroke="#f6f0e6" stroke-width="6" stroke-linecap="round"/>
+      <ellipse cx="36" cy="32" rx="16" ry="18" fill="#1c1612" stroke="#f6f0e6" stroke-width="4"/>
+      <ellipse cx="36" cy="88" rx="16" ry="18" fill="#1c1612" stroke="#f6f0e6" stroke-width="4"/>
+      <ellipse cx="36" cy="32" rx="6" ry="7" fill="#e7c3b0"/>
+      <ellipse cx="36" cy="88" rx="6" ry="7" fill="#e7c3b0"/>
+    </svg>
+    <p>Sharpening the scissors…</p>
+    <div class="loader-bar" aria-hidden="true"><span class="loader-fill"></span></div>
+  </div>
+
+  <div class="flight-scissors" id="flight-scissors" aria-hidden="true">
+    <svg class="scissors" viewBox="0 0 200 120">
+      <g class="blade blade-top"><path d="M92 56c18-2 48-22 70-34 4-2 8 2 6 6L152 42 90 58c-1 0-2-1-2-2z" fill="#fffaf3" stroke="#1c1612" stroke-width="3" stroke-linejoin="round"/></g>
+      <g class="blade blade-bot"><path d="M92 64c18 2 48 22 70 34 4 2 8-2 6-6l-16-14-60-16c-1 0-2 1-2 2z" fill="#f3e6cf" stroke="#1c1612" stroke-width="3" stroke-linejoin="round"/></g>
+      <circle cx="92" cy="60" r="7" fill="#c9a15b" stroke="#1c1612" stroke-width="3"/>
+      <path d="M86 56c-14-8-28-22-42-20" stroke="#1c1612" stroke-width="6" stroke-linecap="round"/>
+      <path d="M86 64c-14 8-28 22-42 20" stroke="#1c1612" stroke-width="6" stroke-linecap="round"/>
+      <ellipse cx="36" cy="32" rx="16" ry="18" fill="#fffaf3" stroke="#1c1612" stroke-width="4"/>
+      <ellipse cx="36" cy="88" rx="16" ry="18" fill="#fffaf3" stroke="#1c1612" stroke-width="4"/>
+      <ellipse cx="36" cy="32" rx="6" ry="7" fill="#e7c3b0"/>
+      <ellipse cx="36" cy="88" rx="6" ry="7" fill="#e7c3b0"/>
+    </svg>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <a class="skip" href="#content">Skip to content</a>
 
   <header class="nav" id="nav">
-    <a class="brand" href="#top" aria-label="abxhair home">
-      <span class="brand-mark">abx</span><span class="brand-script">hair</span>
+    <a class="brand" href="#content">
+      <span class="brand-mark">abx</span>
+      <span class="brand-script">hair</span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-      <span class="sr-only">Menu</span>
-      <span></span><span></span>
+      <span></span><span></span><span></span>
+      <span class="skip">Menu</span>
     </button>
-    <nav id="nav-links" class="nav-links">
+    <nav class="nav-links" id="nav-links">
       <a href="#work">Work</a>
       <a href="#services">Services</a>
       <a href="#about">About</a>
@@ -32,107 +63,230 @@
     </nav>
   </header>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="hero-copy">
-        <p class="kicker"><span>Saintfield</span> · County Down</p>
+  <main id="content">
+    <section class="hero">
+      <div>
+        <p class="kicker">Saintfield · County Down</p>
         <h1>
-          <span class="hero-word">abx<span>hair</span></span>
-          Confidence starts<br>with great hair.
+          <span class="hero-word">abx <span>hair</span></span>
+          Confidence starts with great hair.
         </h1>
-        <p class="lede">
-          Cuts, colour, blow dries and tape-in extensions, brought to your home by Aleigha Bell. Fully qualified, top of her class, and building a salon one loyal client at a time.
-        </p>
+        <p class="lede">Cuts, colour, blow dries and tape-in extensions, brought to your home by Aleigha Bell. Fully qualified, top of her class, and building a salon one loyal client at a time.</p>
         <div class="hero-actions">
           <a class="btn btn-gold" href="#book">Book a home visit</a>
           <a class="btn btn-line" href="#services">See the price list</a>
         </div>
-        <ul class="hero-facts">
-          <li><strong>Home visits</strong><span>Salon, at your door</span></li>
-          <li><strong>Fully qualified</strong><span>Diploma in hair</span></li>
-          <li><strong>Extensions</strong><span>Bell colour &amp; tape-in</span></li>
+        <ul class="pills">
+          <li>Home visits</li>
+          <li>Fully qualified</li>
+          <li>Tape-in extensions</li>
         </ul>
       </div>
       <figure class="hero-frame">
-        <img src="images/look-blonde.jpg" alt="Long blonde hair with bright skunk stripes and a soft shadow through the root" width="690" height="1131">
-        <figcaption>
-          <span>Recent work</span>
-          Skunk stripes
-        </figcaption>
+        <img src="images/highlights-profile.jpg" alt="Long dimensional blonde hair with bright ribbons through the lengths">
+        <figcaption>Dimensional blonde<span>Recent work</span></figcaption>
+        <svg class="scissors hero-scissors" viewBox="0 0 200 120" aria-hidden="true">
+          <g class="blade blade-top"><path d="M92 56c18-2 48-22 70-34 4-2 8 2 6 6L152 42 90 58c-1 0-2-1-2-2z" fill="#fffaf3" stroke="#1c1612" stroke-width="3" stroke-linejoin="round"/></g>
+          <g class="blade blade-bot"><path d="M92 64c18 2 48 22 70 34 4 2 8-2 6-6l-16-14-60-16c-1 0-2 1-2 2z" fill="#f3e6cf" stroke="#1c1612" stroke-width="3" stroke-linejoin="round"/></g>
+          <circle cx="92" cy="60" r="7" fill="#c9a15b" stroke="#1c1612" stroke-width="3"/>
+          <path d="M86 56c-14-8-28-22-42-20" stroke="#1c1612" stroke-width="6" stroke-linecap="round"/>
+          <path d="M86 64c-14 8-28 22-42 20" stroke="#1c1612" stroke-width="6" stroke-linecap="round"/>
+          <ellipse cx="36" cy="32" rx="16" ry="18" fill="#fffaf3" stroke="#1c1612" stroke-width="4"/>
+          <ellipse cx="36" cy="88" rx="16" ry="18" fill="#fffaf3" stroke="#1c1612" stroke-width="4"/>
+          <ellipse cx="36" cy="32" rx="6" ry="7" fill="#e7c3b0"/>
+          <ellipse cx="36" cy="88" rx="6" ry="7" fill="#e7c3b0"/>
+        </svg>
+        <p class="offer-chip">Blowout Fridays £20</p>
       </figure>
     </section>
 
-    <section class="offer" aria-label="Blowout Fridays">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <p>Cuts · Colour · Blow dries · Tape-in extensions · Home visits · Saintfield · Downpatrick · County Down ·</p>
+        <p>Cuts · Colour · Blow dries · Tape-in extensions · Home visits · Saintfield · Downpatrick · County Down ·</p>
+      </div>
+    </div>
+
+    <section class="offer">
       <div class="offer-inner">
-        <p class="offer-kicker">Now booking</p>
-        <h2>Blowout Fridays <em>£20</em></h2>
-        <p>Straight or curly blow dries, every Friday from 21 August to 21 October 2026. Book ahead — the Fridays fill up.</p>
-        <a href="#book">Reserve a Friday</a>
+        <div>
+          <p class="offer-kicker">Now booking</p>
+          <h2>Blowout Fridays <em>£20</em></h2>
+          <p>Straight or curly blow dries, every Friday from 21 August to 21 October 2026. Book ahead — the Fridays fill up.</p>
+        </div>
+        <a class="btn btn-gold" href="#book">Reserve a Friday</a>
       </div>
     </section>
 
     <section class="work" id="work">
-      <div class="section-head">
+      <div class="section-head reveal">
         <p class="kicker">The chair</p>
         <h2>Work that leaves people feeling like themselves, only brighter.</h2>
+        <p class="section-note">Tap a photo to see it bigger.</p>
       </div>
       <div class="gallery">
-        <figure class="shot shot-tall">
-          <button type="button" data-full="images/look-blonde.jpg" data-caption="Skunk stripes — bright ribbons through a lived-in blonde.">
-            <img src="images/look-blonde.jpg" alt="Side view of long blonde hair with pale skunk stripes" width="690" height="1131">
+        <figure class="shot">
+          <button type="button" data-full="images/highlights-profile.jpg" data-caption="Dimensional blonde">
+            <img src="images/highlights-profile.jpg" alt="Long dimensional blonde hair">
+          </button>
+          <figcaption>Dimensional blonde</figcaption>
+        </figure>
+        <figure class="shot">
+          <button type="button" data-full="images/skunk-stripes.jpg" data-caption="Skunk stripes">
+            <img src="images/skunk-stripes.jpg" alt="Dark hair with bright skunk-stripe highlights">
           </button>
           <figcaption>Skunk stripes</figcaption>
         </figure>
         <figure class="shot">
-          <button type="button" data-full="images/look-braid.jpg" data-caption="Braided updo with a sleek, low sweep.">
-            <img src="images/look-braid.jpg" alt="Braided blonde updo with a low polished sweep" width="772" height="1052">
+          <button type="button" data-full="images/money-piece.jpg" data-caption="Money piece">
+            <img src="images/money-piece.jpg" alt="Pearly blonde money piece">
+          </button>
+          <figcaption>Money piece</figcaption>
+        </figure>
+        <figure class="shot">
+          <button type="button" data-full="images/soft-waves.jpg" data-caption="Soft waves">
+            <img src="images/soft-waves.jpg" alt="Soft blonde waves">
+          </button>
+          <figcaption>Soft waves</figcaption>
+        </figure>
+        <figure class="shot">
+          <button type="button" data-full="images/honey-profile.jpg" data-caption="Honey blonde">
+            <img src="images/honey-profile.jpg" alt="Straight honey blonde hair in profile">
+          </button>
+          <figcaption>Honey blonde</figcaption>
+        </figure>
+        <figure class="shot">
+          <button type="button" data-full="images/lived-in-blonde.jpg" data-caption="Lived-in blonde">
+            <img src="images/lived-in-blonde.jpg" alt="Lived-in blonde hair">
+          </button>
+          <figcaption>Lived-in blonde</figcaption>
+        </figure>
+        <figure class="shot">
+          <button type="button" data-full="images/blonde-home.jpg" data-caption="At home">
+            <img src="images/blonde-home.jpg" alt="Long blonde hair from the back, at home">
+          </button>
+          <figcaption>At home</figcaption>
+        </figure>
+        <figure class="shot">
+          <button type="button" data-full="images/salon-blonde.jpg" data-caption="Salon blonde">
+            <img src="images/salon-blonde.jpg" alt="Long straight blonde hair in the salon chair">
+          </button>
+          <figcaption>Salon blonde</figcaption>
+        </figure>
+        <figure class="shot">
+          <button type="button" data-full="images/caramel-waves.jpg" data-caption="Caramel waves">
+            <img src="images/caramel-waves.jpg" alt="Caramel waves from the back">
+          </button>
+          <figcaption>Caramel waves</figcaption>
+        </figure>
+        <figure class="shot">
+          <button type="button" data-full="images/copper.jpg" data-caption="Copper">
+            <img src="images/copper.jpg" alt="Glossy copper red bob">
+          </button>
+          <figcaption>Copper</figcaption>
+        </figure>
+        <figure class="shot">
+          <button type="button" data-full="images/home-straight.jpg" data-caption="Home visit">
+            <img src="images/home-straight.jpg" alt="Straight brown hair during a home visit, with an abxhair cape">
+          </button>
+          <figcaption>Home visit</figcaption>
+        </figure>
+        <figure class="shot">
+          <button type="button" data-full="images/braided-updo.jpg" data-caption="Braided updo">
+            <img src="images/braided-updo.jpg" alt="Braided blonde updo">
           </button>
           <figcaption>Braided updo</figcaption>
         </figure>
         <figure class="shot">
-          <button type="button" data-full="images/look-bun.jpg" data-caption="A twisted rose bun, soft and structured.">
-            <img src="images/look-bun.jpg" alt="Back view of a twisted rose bun in blonde hair" width="752" height="952">
+          <button type="button" data-full="images/blonde-bun.jpg" data-caption="Twisted bun">
+            <img src="images/blonde-bun.jpg" alt="Blonde twisted bun updo">
           </button>
-          <figcaption>Rose bun</figcaption>
-        </figure>
-        <figure class="shot shot-wide">
-          <button type="button" data-full="images/look-pincurls.jpg" data-caption="Pin curls for a soft, bouncy set that lasts the week.">
-            <img src="images/look-pincurls.jpg" alt="Aleigha with pin curls set, promoting weekday soft bouncy curls" width="940" height="1159">
-          </button>
-          <figcaption>Weekday pin curls</figcaption>
+          <figcaption>Twisted bun</figcaption>
         </figure>
         <figure class="shot">
-          <button type="button" data-full="images/look-curls.jpg" data-caption="Twisted updo finished with curled ends.">
-            <img src="images/look-curls.jpg" alt="Blonde twisted updo with curled ends and a gold necklace" width="802" height="1012">
+          <button type="button" data-full="images/before-roots.jpg" data-caption="Before">
+            <img src="images/before-roots.jpg" alt="Blonde hair with visible regrowth, before colour">
           </button>
-          <figcaption>Curled updo</figcaption>
+          <figcaption>Before</figcaption>
+        </figure>
+        <figure class="shot is-poster">
+          <button type="button" data-full="images/transformation.jpg" data-caption="The transformation">
+            <img src="images/transformation.jpg" alt="Before, foils, and the dimensional blonde result">
+          </button>
+          <figcaption>The transformation</figcaption>
+        </figure>
+        <figure class="shot is-poster">
+          <button type="button" data-full="images/before-after.jpg" data-caption="Before and after">
+            <img src="images/before-after.jpg" alt="Before and after of a blonde colour correction">
+          </button>
+          <figcaption>Before and after</figcaption>
         </figure>
         <figure class="shot">
-          <button type="button" data-full="images/tools.jpg" data-caption="The kit comes to you — colour, cut and finish at home.">
-            <img src="images/tools.jpg" alt="Hairdressing tools, tint bowl and Aleigha Bell business cards on a wooden table" width="1011" height="998">
+          <button type="button" data-full="images/kit-and-cards.jpg" data-caption="The kit">
+            <img src="images/kit-and-cards.jpg" alt="Colour bowl, scissors, comb and Aleigha Bell cards">
           </button>
-          <figcaption>The kit, at yours</figcaption>
+          <figcaption>The kit</figcaption>
+        </figure>
+        <figure class="shot">
+          <button type="button" data-full="images/book-now.jpg" data-caption="Book now">
+            <img src="images/book-now.jpg" alt="Hair tools and a book now card">
+          </button>
+          <figcaption>Book now</figcaption>
+        </figure>
+        <figure class="shot is-poster">
+          <button type="button" data-full="images/blowout-fridays.jpg" data-caption="Blowout Fridays">
+            <img src="images/blowout-fridays.jpg" alt="Blowout Fridays poster, £20 every Friday">
+          </button>
+          <figcaption>Blowout Fridays</figcaption>
+        </figure>
+        <figure class="shot is-poster">
+          <button type="button" data-full="images/model-call.jpg" data-caption="Model call">
+            <img src="images/model-call.jpg" alt="Free colour and style in exchange for content">
+          </button>
+          <figcaption>Model call</figcaption>
+        </figure>
+        <figure class="shot is-poster">
+          <button type="button" data-full="images/aleigha.jpg" data-caption="Aleigha">
+            <img src="images/aleigha.jpg" alt="Aleigha Bell, abxhair">
+          </button>
+          <figcaption>Aleigha</figcaption>
+        </figure>
+        <figure class="shot is-poster">
+          <button type="button" data-full="images/my-journey.jpg" data-caption="My journey">
+            <img src="images/my-journey.jpg" alt="Aleigha’s journey poster">
+          </button>
+          <figcaption>My journey</figcaption>
+        </figure>
+        <figure class="shot is-poster">
+          <button type="button" data-full="images/flyer-set.jpg" data-caption="The cards">
+            <img src="images/flyer-set.jpg" alt="Black and gold abxhair cards">
+          </button>
+          <figcaption>The cards</figcaption>
+        </figure>
+        <figure class="shot is-poster">
+          <button type="button" data-full="images/price-list.jpg" data-caption="Price list">
+            <img src="images/price-list.jpg" alt="abxhair price list">
+          </button>
+          <figcaption>Price list</figcaption>
         </figure>
       </div>
     </section>
 
     <section class="services" id="services">
-      <div class="section-head">
+      <div class="section-head reveal">
         <p class="kicker">Price list</p>
         <h2>Hair services</h2>
         <p class="section-note">Colour correction is priced after a consultation. Extension fitting and maintenance start from the prices shown.</p>
       </div>
-
       <div class="price-layout">
         <div class="price-nav" role="tablist" aria-label="Service categories">
           <button type="button" role="tab" aria-selected="true" aria-controls="panel-cutting" id="tab-cutting">Cutting</button>
-          <button type="button" role="tab" aria-selected="false" aria-controls="panel-styling" id="tab-styling" tabindex="-1">Blow dry &amp; styling</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="panel-blow" id="tab-blow" tabindex="-1">Blow dry &amp; styling</button>
           <button type="button" role="tab" aria-selected="false" aria-controls="panel-colour" id="tab-colour" tabindex="-1">Colouring</button>
           <button type="button" role="tab" aria-selected="false" aria-controls="panel-treat" id="tab-treat" tabindex="-1">Treatments</button>
-          <button type="button" role="tab" aria-selected="false" aria-controls="panel-extra" id="tab-extra" tabindex="-1">Extensions</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="panel-ext" id="tab-ext" tabindex="-1">Extensions</button>
         </div>
-
-        <div class="price-panels">
+        <div>
           <div class="price-panel" role="tabpanel" id="panel-cutting" aria-labelledby="tab-cutting">
             <h3>Cutting</h3>
             <ul class="prices">
@@ -144,14 +298,14 @@
               <li><span>Fringe trim</span><span>£5</span></li>
             </ul>
           </div>
-          <div class="price-panel" role="tabpanel" id="panel-styling" aria-labelledby="tab-styling" hidden>
+          <div class="price-panel" role="tabpanel" id="panel-blow" aria-labelledby="tab-blow" hidden>
             <h3>Blow dry &amp; styling</h3>
             <ul class="prices">
               <li><span>Blow dry</span><span>£18</span></li>
               <li><span>Blow dry with extensions</span><span>£22</span></li>
               <li><span>Curls / waves</span><span>£20</span></li>
               <li><span>Hair up</span><span>£25</span></li>
-              <li class="price-note"><span>Blowout Fridays <small>21 Aug – 21 Oct 2026</small></span><span>£20</span></li>
+              <li><span>Blowout Fridays <small>21 Aug – 21 Oct 2026</small></span><span>£20</span></li>
             </ul>
           </div>
           <div class="price-panel" role="tabpanel" id="panel-colour" aria-labelledby="tab-colour" hidden>
@@ -174,12 +328,12 @@
               <li><span>Moisture treatment</span><span>£10</span></li>
             </ul>
           </div>
-          <div class="price-panel" role="tabpanel" id="panel-extra" aria-labelledby="tab-extra" hidden>
+          <div class="price-panel" role="tabpanel" id="panel-ext" aria-labelledby="tab-ext" hidden>
             <h3>Extensions</h3>
             <ul class="prices">
               <li><span>Consultation</span><span>Free</span></li>
-              <li><span>Fitting <small>from</small></span><span>£60</span></li>
-              <li><span>Maintenance <small>from</small></span><span>£30</span></li>
+              <li><span>Fitting</span><span>from £60</span></li>
+              <li><span>Maintenance</span><span>from £30</span></li>
             </ul>
             <p class="panel-foot">Bell colour and tape-in extensions. The consultation is free — message to talk through length, density and a shade that sits with your own hair.</p>
           </div>
@@ -188,23 +342,17 @@
     </section>
 
     <section class="about" id="about">
-      <div class="about-portrait">
-        <img src="images/look-curls.jpg" alt="Blonde twisted updo with soft curled ends, styled by Aleigha Bell" width="802" height="1012">
-        <p class="portrait-caption">Aleigha Bell<br><span>Hairdresser</span></p>
-      </div>
-      <div class="about-copy">
+      <figure class="about-portrait reveal">
+        <img src="images/aleigha.jpg" alt="Aleigha Bell of abxhair">
+        <figcaption class="portrait-caption">Aleigha Bell<span>Hairdresser</span></figcaption>
+      </figure>
+      <div class="about-copy reveal">
         <p class="kicker">The story</p>
         <h2>Small salon. Big dreams.</h2>
         <p class="script-line">My passion, your confidence.</p>
-        <p>
-          Hi, I’m Aleigha — a 19-year-old fully qualified hairdresser with three years of hands-on work and a diploma earned at the top of my class. Doing hair isn’t a side thing. It’s the job.
-        </p>
-        <p>
-          Right now I come to you. Home visits across Saintfield, Downpatrick and nearby County Down, with professional products and the same care you’d expect in a salon chair. Every penny from those appointments goes toward the at-home salon I’m building in Saintfield — a small room where people leave feeling their best.
-        </p>
-        <p>
-          Don’t let the age fool you. The standard is the work: the blend, the finish, and how you feel when you look in the mirror.
-        </p>
+        <p>Hi, I’m Aleigha — a 19-year-old fully qualified hairdresser with three years of hands-on work and a diploma earned at the top of my class. Doing hair isn’t a side thing. It’s the job.</p>
+        <p>Right now I come to you. Home visits across Saintfield, Downpatrick and nearby County Down, with professional products and the same care you’d expect in a salon chair. Every penny from those appointments goes toward the at-home salon I’m building in Saintfield — a small room where people leave feeling their best.</p>
+        <p>Don’t let the age fool you. The standard is the work: the blend, the finish, and how you feel when you look in the mirror.</p>
         <ul class="about-points">
           <li><strong>Top of the class</strong><span>Diploma in hairdressing</span></li>
           <li><strong>Where I am</strong><span>Home visits only, for now</span></li>
@@ -214,7 +362,7 @@
     </section>
 
     <section class="visits" id="visits">
-      <div class="visits-card">
+      <div class="visits-card reveal">
         <p class="kicker">Home visits</p>
         <h2>The salon comes to your kitchen, your bedroom, your hallway mirror.</h2>
         <ul>
@@ -240,31 +388,33 @@
             </div>
           </li>
         </ul>
-        <p class="visits-area">Saintfield · Downpatrick · County Down</p>
+        <ul class="area-pills">
+          <li><span class="pin" aria-hidden="true"></span>Saintfield</li>
+          <li><span class="pin" aria-hidden="true"></span>Downpatrick</li>
+          <li><span class="pin" aria-hidden="true"></span>County Down</li>
+        </ul>
       </div>
-      <figure class="visits-photo">
-        <img src="images/tools.jpg" alt="Black and gold Aleigha Bell cards beside scissors, a comb and a tint bowl" width="1011" height="998">
+      <figure class="visits-photo reveal">
+        <img src="images/home-straight.jpg" alt="A home visit, straight hair and the abxhair cape">
       </figure>
     </section>
 
     <section class="book" id="book">
-      <div class="book-intro">
+      <div class="reveal">
         <p class="kicker">Book</p>
         <h2>Text or WhatsApp. I’ll take it from there.</h2>
-        <p>Tell me the service, a day that suits, and where you are. I’ll confirm the time and what to have ready — a chair, a socket, and a mirror if you have one.</p>
+        <p class="lede">Tell me the service, a day that suits, and where you are. I’ll confirm the time and what to have ready — a chair, a socket, and a mirror if you have one.</p>
         <div class="book-direct">
-          <a class="btn btn-gold" href="https://wa.me/447359811298?text=Hi%20Aleigha%2C%20I%27d%20like%20to%20book%20a%20home%20visit.">WhatsApp Aleigha</a>
+          <a class="btn btn-gold" href="https://wa.me/447359811298" target="_blank" rel="noopener">WhatsApp Aleigha</a>
           <a class="btn btn-line" href="tel:+447359811298">07359 811298</a>
-          <a class="btn btn-line" href="https://instagram.com/a.bxhairdressing" rel="noopener">@a.bxhairdressing</a>
+          <a class="btn btn-line" href="https://instagram.com/a.bxhairdressing" target="_blank" rel="noopener">@a.bxhairdressing</a>
         </div>
       </div>
-      <form class="book-form" id="book-form">
-        <label>
-          Name
-          <input name="name" type="text" autocomplete="name" required maxlength="80">
+      <form class="book-form reveal" id="book-form">
+        <label>Name
+          <input name="name" type="text" required autocomplete="name" placeholder="Your name">
         </label>
-        <label>
-          Service
+        <label>Service
           <select name="service" required>
             <option value="">Choose a service</option>
             <option>Ladies cut &amp; blow dry</option>
@@ -288,17 +438,14 @@
             <option>Extensions fitting or maintenance</option>
           </select>
         </label>
-        <label>
-          Preferred day
-          <input name="day" type="text" placeholder="e.g. Friday afternoon" maxlength="80">
+        <label>Preferred day
+          <input name="day" type="text" placeholder="Friday, or a date">
         </label>
-        <label>
-          Area
-          <input name="area" type="text" placeholder="Saintfield, Downpatrick…" maxlength="80">
+        <label>Area
+          <input name="area" type="text" placeholder="Saintfield, Downpatrick…">
         </label>
-        <label>
-          Anything I should know
-          <textarea name="note" rows="3" maxlength="400" placeholder="Hair history, inspiration, occasion"></textarea>
+        <label>Anything I should know
+          <textarea name="note" rows="3" placeholder="Length, colour, occasion"></textarea>
         </label>
         <button class="btn btn-gold" type="submit">Send on WhatsApp</button>
         <p class="form-hint" id="form-hint">This opens WhatsApp with your message ready to send. Nothing is stored on this site.</p>
@@ -308,7 +455,7 @@
 
   <footer class="footer">
     <div>
-      <p class="brand footer-brand"><span class="brand-mark">abx</span><span class="brand-script">hair</span></p>
+      <p class="footer-brand">abx hair</p>
       <p>Confidence starts with great hair.</p>
     </div>
     <div>
@@ -317,18 +464,18 @@
       <p>Saintfield, County Down</p>
     </div>
     <div>
-      <p><a href="https://instagram.com/a.bxhairdressing" rel="noopener">Instagram</a></p>
-      <p><a href="https://wa.me/447359811298">WhatsApp</a></p>
-      <p class="fine">© <span id="year">2026</span> abxhair</p>
+      <p><a href="https://instagram.com/a.bxhairdressing" target="_blank" rel="noopener">Instagram</a></p>
+      <p><a href="https://wa.me/447359811298" target="_blank" rel="noopener">WhatsApp</a></p>
+      <p>© <span id="year">2026</span> abxhair</p>
     </div>
   </footer>
 
   <dialog class="lightbox" id="lightbox">
     <form method="dialog">
-      <button class="lightbox-close" type="submit" aria-label="Close">Close</button>
+      <button class="lightbox-close" type="submit">Close</button>
+      <img id="lightbox-img" alt="">
+      <p id="lightbox-cap"></p>
     </form>
-    <img alt="" id="lightbox-img">
-    <p id="lightbox-cap"></p>
   </dialog>
 
   <script src="js/main.js"></script>

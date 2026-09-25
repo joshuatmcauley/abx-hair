@@ -3,13 +3,40 @@
   var toggle = document.querySelector(".nav-toggle");
   var links = document.getElementById("nav-links");
   var year = document.getElementById("year");
+  var scissors = document.getElementById("flight-scissors");
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   if (year) year.textContent = String(new Date().getFullYear());
 
-  function onScroll() {
-    nav.classList.toggle("scrolled", window.scrollY > 8);
+  if (reduced) {
+    document.body.classList.add("is-ready");
+    document.body.classList.remove("is-loading");
+  } else {
+    document.body.classList.add("is-loading");
+    window.setTimeout(function () {
+      document.body.classList.add("is-ready");
+      document.body.classList.remove("is-loading");
+    }, 2300);
   }
+
+  function onScroll() {
+    nav.classList.toggle("scrolled", window.scrollY > 12);
+    if (!scissors || reduced || window.innerWidth < 900) return;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var p = max > 0 ? window.scrollY / max : 0;
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var x = 12 + Math.sin(p * Math.PI * 2.4) * (w * 0.34) + w * 0.42;
+    var y = 78 + p * Math.max(120, h - 190);
+    var rot = Math.sin(p * Math.PI * 4) * 18 - 8;
+    x = Math.max(8, Math.min(w - 100, x));
+    y = Math.max(64, Math.min(h - 90, y));
+    scissors.style.transform = "translate(" + x + "px," + y + "px) rotate(" + rot + "deg)";
+  }
+
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
 
   toggle.addEventListener("click", function () {
     var open = links.classList.toggle("open");
@@ -21,6 +48,20 @@
       toggle.setAttribute("aria-expanded", "false");
     }
   });
+
+  var reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+  if (reduced || !("IntersectionObserver" in window) || CSS.supports("animation-timeline", "view()")) {
+    reveals.forEach(function (el) { el.classList.add("is-in"); });
+  } else {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.18 });
+    reveals.forEach(function (el) { observer.observe(el); });
+  }
 
   var tabs = Array.prototype.slice.call(document.querySelectorAll(".price-nav [role='tab']"));
   function selectTab(tab) {
@@ -48,7 +89,7 @@
   var dialog = document.getElementById("lightbox");
   var lightboxImg = document.getElementById("lightbox-img");
   var lightboxCap = document.getElementById("lightbox-cap");
-  document.querySelectorAll(".gallery button").forEach(function (button) {
+  document.querySelectorAll(".shot button").forEach(function (button) {
     button.addEventListener("click", function () {
       lightboxImg.src = button.getAttribute("data-full");
       lightboxImg.alt = button.getAttribute("data-caption") || "";
