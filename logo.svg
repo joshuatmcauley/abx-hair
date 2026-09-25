@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 760" fill="none">
+  <rect width="800" height="760" fill="#100e0c"/>
+  <g transform="translate(214 36) scale(1.55)">
+    <circle cx="120" cy="120" r="118" fill="#100e0c"/>
+    <circle cx="120" cy="120" r="104" stroke="url(#gold)" stroke-width="1.6"/>
+    <g clip-path="url(#disc)" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path stroke-width="1.35" d="M146 58c-10 0-20 7-25 16-5 8-7 12-15 17-8 5-14 12-13 19 1 6 9 7 13 11-7 4-10 11-4 16 8 6 18 7 25 14 5 7 7 18 9 32"/>
+      <path stroke-width="1.15" d="M112 86c5 3 12 2 16-2"/>
+      <path stroke-width="1" d="M108 78c6-3 14-2 18 2"/>
+      <path stroke-width="1.05" d="M138 62c22-10 52-8 68 16"/>
+      <path stroke-width="1.05" d="M136 70c26-6 58 2 64 30"/>
+      <path stroke-width="1.05" d="M134 80c28-2 60 16 54 46"/>
+      <path stroke-width="1.05" d="M140 90c24 6 52 28 40 58"/>
+      <path stroke-width="1" d="M146 102c20 14 40 38 24 64"/>
+      <path stroke-width="1" d="M150 116c16 16 28 40 10 62"/>
+      <path stroke-width="1" d="M148 132c12 16 18 34 2 50"/>
+      <path stroke-width="1.05" d="M132 74c10 22 6 42-4 56"/>
+      <path stroke-width="1" d="M144 86c8 22 2 44-10 58"/>
+      <path stroke-width="1" d="M154 100c8 20 2 40-12 52"/>
+      <path stroke-width="1.05" d="M196 92c10 8 8 18-2 20"/>
+      <path stroke-width="1.05" d="M186 138c12 6 10 18-4 18"/>
+      <path stroke-width="1" d="M170 170c10 8 4 18-8 16"/>
+      <path stroke-width="1" d="M158 78c14 2 22 12 18 22"/>
+    </g>
+    <text x="34" y="118" fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-style="italic">abx</text>
+  </g>
+  <defs>
+    <linearGradient id="gold" x1="300" y1="70" x2="520" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f6e7c1"/>
+      <stop offset="0.38" stop-color="#e0c27a"/>
+      <stop offset="0.72" stop-color="#c4964a"/>
+      <stop offset="1" stop-color="#8d6232"/>
+    </linearGradient>
+    <clipPath id="disc">
+      <circle cx="120" cy="120" r="102"/>
+    </clipPath>
+  </defs>
+  <text x="400" y="500" text-anchor="middle" fill="url(#gold)" font-family="Georgia, 'Palatino Linotype', 'Times New Roman', serif" font-size="108" letter-spacing="-1">abxhair</text>
+  <text x="400" y="575" text-anchor="middle" fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="6">CONFIDENCE STARTS</text>
+  <text x="400" y="612" text-anchor="middle" fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="6">WITH GREAT HAIR</text>
+</svg>

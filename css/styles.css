@@ -130,19 +130,27 @@ body.is-ready .flight-scissors { opacity: 1; transition: opacity 0.4s ease; }
   backdrop-filter: blur(16px);
   box-shadow: 0 8px 30px rgba(28, 22, 18, 0.06);
 }
-.brand { display: flex; align-items: baseline; gap: 0.2rem; }
-.brand-mark {
+.brand { display: flex; align-items: center; gap: 0.65rem; }
+.brand img { width: 48px; height: 48px; border-radius: 50%; }
+.brand-word {
   font-family: var(--serif);
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: lowercase;
-  font-size: 1.35rem;
-}
-.brand-script {
-  font-family: var(--script);
+  font-weight: 500;
+  font-size: 1.85rem;
+  letter-spacing: -0.02em;
   color: var(--gold-deep);
-  font-size: 1.8rem;
-  line-height: 0;
+  line-height: 1;
+}
+.hero-mark {
+  width: 132px;
+  height: 132px;
+  margin: 0 0 1rem;
+  border-radius: 50%;
+}
+.footer-logo {
+  width: min(240px, 100%);
+  height: auto;
+  border-radius: 16px;
+  margin-bottom: 0.6rem;
 }
 .nav-links { display: flex; align-items: center; gap: 1.35rem; }
 .nav-links a {
