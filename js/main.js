@@ -3,7 +3,6 @@
   var toggle = document.querySelector(".nav-toggle");
   var links = document.getElementById("nav-links");
   var year = document.getElementById("year");
-  var scissors = document.getElementById("flight-scissors");
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (year) year.textContent = String(new Date().getFullYear());
@@ -21,17 +20,6 @@
 
   function onScroll() {
     nav.classList.toggle("scrolled", window.scrollY > 12);
-    if (!scissors || reduced || window.innerWidth < 900) return;
-    var max = document.documentElement.scrollHeight - window.innerHeight;
-    var p = max > 0 ? window.scrollY / max : 0;
-    var w = window.innerWidth;
-    var h = window.innerHeight;
-    var x = 12 + Math.sin(p * Math.PI * 2.4) * (w * 0.34) + w * 0.42;
-    var y = 78 + p * Math.max(120, h - 190);
-    var rot = Math.sin(p * Math.PI * 4) * 18 - 8;
-    x = Math.max(8, Math.min(w - 100, x));
-    y = Math.max(64, Math.min(h - 90, y));
-    scissors.style.transform = "translate(" + x + "px," + y + "px) rotate(" + rot + "deg)";
   }
 
   onScroll();

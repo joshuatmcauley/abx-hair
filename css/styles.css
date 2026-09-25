@@ -68,7 +68,22 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.02e
   gap: 18px;
   animation: curtain 0.9s cubic-bezier(0.76, 0, 0.24, 1) 1.9s forwards;
 }
-.loader-scissors { width: min(220px, 58vw); animation: bob 0.9s ease-in-out infinite; }
+.loader-mix { width: min(168px, 46vw); overflow: visible; }
+.mix-swirl {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: swirl 1.15s linear infinite;
+}
+.mix-brush {
+  transform-box: view-box;
+  transform-origin: 50% 69%;
+  animation: stir 0.7s ease-in-out infinite alternate;
+}
+@keyframes swirl { to { transform: rotate(360deg); } }
+@keyframes stir {
+  from { transform: rotate(-20deg); }
+  to { transform: rotate(10deg); }
+}
 .loader p {
   margin: 0;
   letter-spacing: 0.2em;
@@ -91,29 +106,6 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.02e
 }
 @keyframes fill { to { width: 100%; } }
 @keyframes curtain { to { transform: translateY(-110%); visibility: hidden; } }
-@keyframes bob {
-  50% { transform: translateY(-8px) rotate(-6deg); }
-}
-
-.scissors .blade { transform-box: view-box; transform-origin: 46% 50%; }
-.scissors .blade-top { animation: bite-top 0.28s ease-in-out infinite alternate; }
-.scissors .blade-bot { animation: bite-bot 0.28s ease-in-out infinite alternate; }
-@keyframes bite-top { to { transform: rotate(-16deg); } }
-@keyframes bite-bot { to { transform: rotate(16deg); } }
-
-.flight-scissors {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 92px;
-  z-index: 40;
-  pointer-events: none;
-  opacity: 0;
-  filter: drop-shadow(0 12px 10px rgba(28, 22, 18, 0.16));
-  will-change: transform;
-}
-body.is-ready .flight-scissors { opacity: 1; transition: opacity 0.4s ease; }
-
 .nav {
   position: sticky;
   top: 0;
@@ -293,14 +285,6 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   text-transform: uppercase;
   font-size: 0.62rem;
   color: var(--gold-deep);
-}
-.hero-scissors {
-  position: absolute;
-  width: 120px;
-  right: -8px;
-  top: 8%;
-  animation: bob 2.4s ease-in-out infinite;
-  filter: drop-shadow(0 10px 8px rgba(28, 22, 18, 0.12));
 }
 .offer-chip {
   position: absolute;
@@ -698,7 +682,6 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   .hero { min-height: 0; padding-top: 1.2rem; }
   .hero-frame figcaption { left: 0.8rem; }
   .about-points { grid-template-columns: 1fr; }
-  .flight-scissors, .hero-scissors { display: none; }
   .price-nav {
     flex-direction: row;
     overflow-x: auto;
@@ -718,10 +701,8 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .loader { display: none; }
-  .flight-scissors, .hero-scissors, .marquee-track,
-  .scissors .blade, .loader-scissors, .reveal {
+  .marquee-track, .mix-swirl, .mix-brush, .reveal {
     animation: none !important;
   }
-  .flight-scissors { display: none; }
   .reveal { opacity: 1; transform: none; }
 }
